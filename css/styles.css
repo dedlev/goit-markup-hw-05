@@ -93,13 +93,14 @@ p {
   color: var(--accent-color);
 }
 
+.logo-black {
+  color: #000000;
+  transition: var(--transition-color);
+}
+
 .logo-black:hover,
 .logo-black:focus {
   color: var(--accent-color);
-}
-
-.logo-black {
-  color: #000000;
 }
 
 .navi {
@@ -132,23 +133,17 @@ p {
   height: 4px;
 
   border-radius: 2px;
-  background-color: var(--primary-white-color);
-
-  transition: var(--transition-bg-color);
+  background-color: var(--accent-color);
+  opacity: 0;
 }
 
 .site-link.current::after {
-  background-color: var(--accent-color);
+  opacity: 1;
 }
 
 .site-link:hover,
 .site-link:focus {
   color: var(--accent-color);
-}
-
-.site-link:hover::after,
-.site-link:focus::after {
-  background-color: var(--accent-color);
 }
 
 .site-link.current {
@@ -209,6 +204,11 @@ p {
 
 /* секція герой */
 
+.hero .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .overlay {
   max-width: 1600px;
   height: 600px;
@@ -219,11 +219,6 @@ p {
   background-image: linear-gradient(var(--hero-bg-color), var(--hero-bg-color)),
     url(../images/hero/hero-img.jpg);
   background-position: center;
-}
-
-.hero .container {
-  padding-top: 200px;
-  padding-bottom: 200px;
 }
 
 .hero {
@@ -269,6 +264,46 @@ p {
   background-color: var(--primary-white-color);
   color: #2f303a;
 }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1024px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 528px;
+  height: 581px;
+
+  background-color: var(--primary-white-color);
+
+  transform: translate(-50%, -50%);
+}
+
+.batton-close {
+  position: relative;
+}
+
+.hero-close {
+  position: absolute;
+  top: 8px;
+  left: 238px;
+}
+
+
 
 /* сітка для колекції з елементів */
 /* 
@@ -441,11 +476,11 @@ p {
 
   width: 44px;
   height: 44px;
+  border-radius: 50%;
 
   background-color: var(--primary-white-color);
   color: #afb1b8;
-  border-radius: 50%;
-
+ 
   transition: var(--transition-color);
   transition: var(--transition-bg-color);
 }
@@ -518,6 +553,7 @@ p {
 
 .logo-white {
   color: var(--primary-white-color);
+  transition: var(--transition-color);
 }
 
 .logo-white:hover,
