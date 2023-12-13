@@ -658,9 +658,11 @@ p {
 
   background-color: #f5f4fa;
   color: var(--title-text-color);
+  box-shadow: none;
 
   transition: color 250ms var(--timing-function),
-    background-color 250ms var(--timing-function);
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 .item-btn + .item-btn {
@@ -708,6 +710,12 @@ p {
   border-left: 1px solid #eee;
 
   background-color: var(--primary-white-color);
+}
+
+.portfolio-link {
+  box-shadow: none;
+
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .portfolio-link:hover,
