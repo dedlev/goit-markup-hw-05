@@ -766,6 +766,7 @@ p {
   color: #fff;
 }
 
-.portfolio-link:hover .portfolio-overlay {
+.portfolio-link:hover .portfolio-overlay,
+.portfolio-link:focus .portfolio-overlay {
   transform: translate(0%);
 }
